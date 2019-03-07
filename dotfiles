@@ -1,0 +1,10 @@
+#!/bin/bash
+set -eux
+
+target=~/.files
+
+tools/git-clone git@github.com:itchyny/dotfiles.git "$target"
+
+for f in .vimrc .vimrc.yaml .zshrc; do
+  tools/make-symlink "$target/$f" ~/"$f"
+done
