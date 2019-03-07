@@ -1,0 +1,21 @@
+#!/bin/bash
+set -eux
+
+target=~/.zsh
+
+if ! [ -e "$target" ]; then
+  mkdir -p "$target"
+fi
+
+# http://mimosa-pudica.net/zsh-incremental.html
+if ! [ -e "$target/incr-0.2.zsh" ]; then
+  curl -L http://mimosa-pudica.net/src/incr-0.2.zsh -o "$target/incr-0.2.zsh"
+fi
+
+plugins=(zsh-syntax-highlighting zsh-history-substring-search)
+
+for name in "${plugins[@]}"; do
+  if ! [ -e "$target/$name" ]; then
+    git clone "git@github.com:zsh-users/$name.git" "$target/$name"
+  fi
+done
