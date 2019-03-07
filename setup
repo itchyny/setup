@@ -6,3 +6,5 @@ cd "$(dirname "$0")"
 ./dotfiles
 ./bin
 ./zsh-plugins
+
+./brew
