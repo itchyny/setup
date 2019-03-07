@@ -1,3 +1,4 @@
 setup
+Do not use this if you are not itchyny.
 
 git clone git@github.com:itchyny/setup.git /tmp/setup && /tmp/setup/setup
