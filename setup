@@ -8,3 +8,4 @@ cd "$(dirname "$0")"
 ./zsh-plugins
 
 ./brew
+./brew-formula

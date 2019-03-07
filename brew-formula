@@ -1,0 +1,14 @@
+#!/bin/bash
+set -eux
+
+formulas=( \
+  wget \
+  curl \
+  redis \
+  mackerelio/mackerel-agent/mackerel-agent \
+  mackerelio/mackerel-agent/mkr \
+)
+
+for formula in "${formulas[@]}"; do
+  tools/brew-install "$formula"
+done
