@@ -1,3 +1,4 @@
 #!/bin/bash
+set -eux
 
-echo setup
+cd "$(dirname "$0")"
