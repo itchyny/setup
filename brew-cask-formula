@@ -6,6 +6,7 @@ formulas=( \
   iterm2 \
   google-chrome \
   firefox \
+  hammerspoon \
 )
 
 for formula in "${formulas[@]}"; do
