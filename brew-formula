@@ -5,6 +5,7 @@ formulas=( \
   wget \
   curl \
   redis \
+  haskell-stack \
   mackerelio/mackerel-agent/mackerel-agent \
   mackerelio/mackerel-agent/mkr \
 )
