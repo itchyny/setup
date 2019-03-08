@@ -9,6 +9,7 @@ formulas=( \
   git \
   zsh \
   vim \
+  htop \
   redis \
   go \
   haskell-stack \
