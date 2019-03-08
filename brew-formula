@@ -4,6 +4,7 @@ set -eux
 formulas=( \
   wget \
   curl \
+  zsh \
   redis \
   go \
   haskell-stack \
