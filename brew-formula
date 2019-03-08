@@ -5,6 +5,7 @@ formulas=( \
   wget \
   curl \
   zsh \
+  vim \
   redis \
   go \
   haskell-stack \
