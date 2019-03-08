@@ -1,0 +1,11 @@
+#!/bin/bash
+set -eux
+
+formulas=( \
+  java \
+  google-chrome \
+)
+
+for formula in "${formulas[@]}"; do
+  tools/brew-cask-install "$formula"
+done
