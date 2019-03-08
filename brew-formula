@@ -4,6 +4,7 @@ set -eux
 formulas=( \
   wget \
   curl \
+  git \
   zsh \
   vim \
   redis \
