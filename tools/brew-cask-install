@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+  echo Usage: brew-cask-install formula > /dev/stderr
+  exit 1
+fi
+
+formula=$1
+
+if ! brew cask ls --versions "$formula"; then
+  brew cask install "$formula"
+fi
