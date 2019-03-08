@@ -4,6 +4,7 @@ set -eux
 formulas=( \
   java \
   google-chrome \
+  firefox \
 )
 
 for formula in "${formulas[@]}"; do
