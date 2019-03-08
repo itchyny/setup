@@ -20,6 +20,6 @@ plugins=( \
 
 for name in "${plugins[@]}"; do
   if ! [ -e "$target/${name##*/}" ]; then
-    git clone "git@github.com:$name.git" "$target/${name##*/}"
+    git clone "https://github.com/$name" "$target/${name##*/}"
   fi
 done

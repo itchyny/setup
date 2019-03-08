@@ -2,4 +2,4 @@ setup
 Do not use this if you are not itchyny.
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/itchyny/setup/master/brew)"
-git clone git@github.com:itchyny/setup.git /tmp/setup && /tmp/setup/setup
+git clone https://github.com/itchyny/setup /tmp/setup && /tmp/setup/setup

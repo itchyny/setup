@@ -3,7 +3,7 @@ set -eux
 
 target=~/.files
 
-tools/git-clone git@github.com:itchyny/dotfiles.git "$target"
+tools/git-clone https://github.com/itchyny/dotfiles "$target"
 
 for f in .vimrc .vimrc.yaml .zshrc .tmux.conf; do
   tools/make-symlink "$target/$f" ~/"$f"

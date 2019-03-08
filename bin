@@ -3,4 +3,4 @@ set -eux
 
 target=~/.bin
 
-tools/git-clone git@github.com:itchyny/bin.git "$target"
+tools/git-clone https://github.com/itchyny/bin "$target"
