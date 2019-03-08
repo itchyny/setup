@@ -13,3 +13,4 @@ cd "$(dirname "$0")"
 
 ./miv
 ./finder
+./trackpad
