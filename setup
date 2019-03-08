@@ -6,11 +6,10 @@ cd "$(dirname "$0")"
 ./dotfiles
 ./bin
 ./zsh-plugins
+./macos
 
 ./brew
 ./brew-formula
 ./brew-cask-formula
 
 ./miv
-./finder
-./trackpad

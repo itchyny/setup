@@ -2,9 +2,18 @@
 set -eux
 
 if ! command -v defaults >/dev/null; then
-  echo "trackpad: defaults not found" > /dev/stderr
+  echo "macos: defaults not found" > /dev/stderr
   exit
 fi
+
+if ! command -v osascript >/dev/null; then
+  echo "macos: osascript not found" > /dev/stderr
+  exit
+fi
+
+# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
+defaults write com.apple.finder QuitMenuItem -bool YES
+osascript -e 'tell application "Finder" to quit'
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
