@@ -10,3 +10,5 @@ cd "$(dirname "$0")"
 ./brew
 ./brew-formula
 ./brew-cask-formula
+
+./miv
