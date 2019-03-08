@@ -3,6 +3,7 @@ set -eux
 
 formulas=( \
   java \
+  iterm2 \
   google-chrome \
   firefox \
 )
