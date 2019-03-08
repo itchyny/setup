@@ -4,6 +4,7 @@ set -eux
 formulas=( \
   java \
   iterm2 \
+  google-japanese-ime \
   google-chrome \
   firefox \
   hammerspoon \
