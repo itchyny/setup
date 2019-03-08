@@ -21,4 +21,4 @@ tools/git-clone https://github.com/itchyny/miv "$target"
 
 cd "$target"
 stack install
-zsh -c "miv install"
+/Users/itchyny/.local/bin/miv install
