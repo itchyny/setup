@@ -7,6 +7,7 @@ formulas=( \
   google-chrome \
   firefox \
   hammerspoon \
+  flux \
 )
 
 for formula in "${formulas[@]}"; do
