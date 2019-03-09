@@ -11,11 +11,39 @@ if ! command -v osascript >/dev/null; then
   exit
 fi
 
+# Ref: https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+# Finder: show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -bool true
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# Finder: show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+# Finder: show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+# Display full POSIX path as Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool YES
+# Quit Finder
 osascript -e 'tell application "Finder" to quit'
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Disable hibernation (speeds up entering sleep mode)
+sudo pmset -a hibernatemode 0
+
+# Remove the sleep image file to save disk space
+sudo rm -f /private/var/vm/sleepimage || :
+# Create a zero-byte file instead…
+sudo touch /private/var/vm/sleepimage || :
+# …and make sure it can’t be rewritten
+sudo chflags uchg /private/var/vm/sleepimage || :
