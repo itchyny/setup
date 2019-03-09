@@ -21,6 +21,6 @@ tools/git-clone https://github.com/itchyny/miv "$target"
 
 cd "$target"
 stack install
-miv=/Users/itchyny/.local/bin/miv
+miv=~/.local/bin/miv
 $miv install
 cd "$($miv path vimproc)" && make
