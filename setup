@@ -9,6 +9,7 @@ sudo -v
 ./bin
 ./zsh-plugins
 ./macos
+./chsh-zsh
 
 ./brew
 ./brew-formula

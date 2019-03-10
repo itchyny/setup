@@ -1,0 +1,4 @@
+#!/bin/bash
+set -eux
+
+sudo chsh -s /bin/zsh "$(whoami)"
