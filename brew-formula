@@ -15,6 +15,7 @@ formulas=( \
   haskell-stack \
   mackerelio/mackerel-agent/mackerel-agent \
   mackerelio/mackerel-agent/mkr \
+  itchyny/git-branch-name/git-branch-name \
 )
 
 for formula in "${formulas[@]}"; do
