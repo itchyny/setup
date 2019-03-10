@@ -38,6 +38,16 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# Dock
+defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock magnification -bool true
+defaults write com.apple.dock largesize -int 54
+defaults write com.apple.dock mineffect -string "scale"
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock showhidden -bool true
+defaults write com.apple.dock show-recents -bool false
+osascript -e 'tell application "Dock" to quit'
+
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
 
