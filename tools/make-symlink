@@ -1,7 +1,9 @@
 #!/bin/bash
 
+cmdname="$(basename "${BASH_SOURCE[0]}")"
+
 if [ $# -ne 2 ]; then
-  echo Usage: make-symlink source target > /dev/stderr
+  echo "Usage: $cmdname source target" > /dev/stderr
   exit 1
 fi
 

@@ -1,10 +1,12 @@
 #!/bin/bash
 set -eux
 
+cmdname="$(basename "${BASH_SOURCE[0]}")"
+
 cd "$(dirname "$0")/.."
 
 if ! command -v shellcheck >/dev/null; then
-  echo "ci: shellcheck is required" > /dev/stderr
+  echo "$cmdname: shellcheck is required" > /dev/stderr
   exit 1
 fi
 

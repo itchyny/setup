@@ -1,7 +1,9 @@
 #!/bin/bash
 
+cmdname="$(basename "${BASH_SOURCE[0]}")"
+
 if [ $# -ne 1 ]; then
-  echo Usage: brew-install formula > /dev/stderr
+  echo "Usage: $cmdname formula" > /dev/stderr
   exit 1
 fi
 
