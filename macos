@@ -18,21 +18,14 @@ fi
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-# Disable the “Are you sure you want to open this application?” dialog
+# Finder
 defaults write com.apple.LaunchServices LSQuarantine -bool false
-# Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
-# Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-# Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
-# Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
-# Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool YES
-# Quit Finder
 osascript -e 'tell application "Finder" to quit'
 
 # Trackpad: enable tap to click for this user and for the login screen
