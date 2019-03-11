@@ -11,6 +11,7 @@ formulas=( \
   redis \
   go \
   haskell-stack \
+  shellcheck \
   \
   mackerelio/mackerel-agent/mackerel-agent \
   mackerelio/mackerel-agent/mkr \
