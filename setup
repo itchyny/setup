@@ -15,5 +15,3 @@ sudo -v
 ./brew-formula
 ./brew-cask-formula
 ./ricty
-
-./miv

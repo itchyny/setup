@@ -18,8 +18,14 @@ formulas=( \
   \
   itchyny/git-branch-name/git-branch-name \
   itchyny/fillin/fillin \
+  itchyny/miv/miv \
 )
 
 for formula in "${formulas[@]}"; do
   tools/brew-install "$formula"
 done
+
+if command -v miv >/dev/null 2>&1; then
+  miv install
+  cd "$(miv path vimproc)" && make
+fi
