@@ -19,6 +19,7 @@ formulas=( \
   itchyny/git-branch-name/git-branch-name \
   itchyny/fillin/fillin \
   itchyny/miv/miv \
+  itchyny/qhs/qhs \
   itchyny/rexdep/rexdep \
 )
 
