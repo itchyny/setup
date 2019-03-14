@@ -3,6 +3,6 @@ set -eux
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/itchyny/setup/master/brew)"
 
-trap 'rm -rf /tmp/setup' SIGHUP SIGINT SIGQUIT SIGTERM
+trap 'rm -rf /tmp/setup' EXIT SIGHUP SIGINT SIGQUIT SIGTERM
 git clone https://github.com/itchyny/setup /tmp/setup
 /tmp/setup/setup
