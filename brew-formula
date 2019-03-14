@@ -10,6 +10,7 @@ formulas=( \
   htop \
   redis \
   go \
+  hub \
   haskell-stack \
   shellcheck \
   \
