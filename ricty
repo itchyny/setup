@@ -1,7 +1,6 @@
 #!/bin/bash
 set -eux
 
-brew tap sanemat/font
-brew install ricty
+brew install sanemat/font/ricty
 cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
 fc-cache -vf
