@@ -9,7 +9,9 @@ fi
 
 # http://mimosa-pudica.net/zsh-incremental.html
 if ! [ -e "$target/incr-0.2.zsh" ]; then
-  curl -L http://mimosa-pudica.net/src/incr-0.2.zsh -o "$target/incr-0.2.zsh"
+  curl -L http://mimosa-pudica.net/src/incr-0.2.zsh \
+    | sed 's/^\(bindkey.*backward-delete-char-incr\)/# \1/' \
+    > "$target/incr-0.2.zsh"
 fi
 
 plugins=( \
