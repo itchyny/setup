@@ -47,6 +47,10 @@ defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dock show-recents -bool false
 osascript -e 'tell application "Dock" to quit'
 
+# Key
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
+defaults write NSGlobalDomain KeyRepeat -int 2
+
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
 
