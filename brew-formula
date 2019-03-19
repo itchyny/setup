@@ -23,6 +23,7 @@ formulas=( \
   itchyny/qhs/qhs \
   itchyny/rexdep/rexdep \
   itchyny/gojo/gojo \
+  itchyny/tap/formulate \
 )
 
 for formula in "${formulas[@]}"; do
