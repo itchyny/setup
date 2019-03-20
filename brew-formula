@@ -17,12 +17,12 @@ formulas=( \
   mackerelio/mackerel-agent/mackerel-agent \
   mackerelio/mackerel-agent/mkr \
   \
-  itchyny/git-branch-name/git-branch-name \
-  itchyny/fillin/fillin \
-  itchyny/miv/miv \
-  itchyny/qhs/qhs \
-  itchyny/rexdep/rexdep \
-  itchyny/gojo/gojo \
+  itchyny/tap/git-branch-name \
+  itchyny/tap/fillin \
+  itchyny/tap/miv \
+  itchyny/tap/qhs \
+  itchyny/tap/rexdep \
+  itchyny/tap/gojo \
   itchyny/tap/formulate \
 )
 
