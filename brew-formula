@@ -23,6 +23,7 @@ formulas=( \
   itchyny/tap/qhs \
   itchyny/tap/rexdep \
   itchyny/tap/gojo \
+  itchyny/tap/mkrg \
   itchyny/tap/formulate \
 )
 
