@@ -25,3 +25,5 @@ for name in "${plugins[@]}"; do
     git clone "https://github.com/$name" "$target/${name##*/}"
   fi
 done
+
+find "$target" -name '*.zsh' -type f -exec zsh -c 'test -f {}.zwc || zcompile {}' \;
