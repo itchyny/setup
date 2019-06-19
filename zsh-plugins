@@ -16,6 +16,7 @@ fi
 
 plugins=( \
   itchyny/zsh-auto-fillin \
+  itchyny/zsh-git-alias \
   zsh-users/zsh-syntax-highlighting \
   zsh-users/zsh-history-substring-search \
 )
