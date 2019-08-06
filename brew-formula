@@ -13,6 +13,7 @@ formulas=( \
   hub \
   haskell-stack \
   shellcheck \
+  envchain \
   \
   mackerelio/mackerel-agent/mackerel-agent \
   mackerelio/mackerel-agent/mkr \
