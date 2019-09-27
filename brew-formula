@@ -5,13 +5,16 @@ formulas=( \
   wget \
   curl \
   git \
+  hub \
+  jq \
   zsh \
   vim \
   htop \
   redis \
   go \
-  hub \
+  ruby \
   haskell-stack \
+  rust \
   shellcheck \
   envchain \
   \
@@ -27,6 +30,8 @@ formulas=( \
   itchyny/tap/gojq \
   itchyny/tap/mkrg \
   itchyny/tap/formulate \
+  \
+  Songmu/tap/blogsync \
 )
 
 for formula in "${formulas[@]}"; do
