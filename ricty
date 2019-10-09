@@ -1,6 +1,0 @@
-#!/bin/bash
-set -euxo pipefail
-
-brew install sanemat/font/ricty
-cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/
-fc-cache -vf

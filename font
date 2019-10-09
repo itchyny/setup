@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euxo pipefail
+
+tools/brew-cask-install homebrew/cask-fonts/font-inconsolata
+fc-cache -vf
