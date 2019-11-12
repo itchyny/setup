@@ -4,3 +4,5 @@ set -euxo pipefail
 target=~/.bin
 
 tools/git-clone https://github.com/itchyny/bin "$target"
+
+export PATH=$target:$PATH
