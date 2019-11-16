@@ -22,6 +22,9 @@ formulas=( \
   rust \
   shellcheck \
   envchain \
+  ctags \
+  coreutils \
+  gnuplot \
   awscli \
   \
   mackerelio/mackerel-agent/mackerel-agent \
