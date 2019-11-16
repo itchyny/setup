@@ -9,6 +9,7 @@ formulas=( \
   jq \
   zsh \
   vim \
+  tmux \
   htop \
   redis \
   go \
