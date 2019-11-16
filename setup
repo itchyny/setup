@@ -15,4 +15,5 @@ sudo -v
 ./brew-formula
 ./brew-cask-formula
 ./font
+./ruby
 ./lsp
