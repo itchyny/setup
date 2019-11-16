@@ -49,3 +49,8 @@ if command -v miv >/dev/null 2>&1; then
   miv install
   cd "$(miv path vimproc)" && make
 fi
+
+eval "$(plenv init -)"
+eval "$(pyenv init -)"
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
