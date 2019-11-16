@@ -15,6 +15,7 @@ formulas=( \
   go \
   rbenv ruby-build \
   plenv perl-build \
+  pyenv \
   haskell-stack \
   rust \
   shellcheck \
