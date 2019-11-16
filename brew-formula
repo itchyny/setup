@@ -13,7 +13,7 @@ formulas=( \
   htop \
   redis \
   go \
-  ruby \
+  rbenv ruby-build \
   haskell-stack \
   rust \
   shellcheck \
