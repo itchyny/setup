@@ -14,7 +14,8 @@ formulas=( \
   redis \
   go \
   scala sbt \
-  rbenv ruby-build \
+  rbenv \
+  nodenv \
   plenv perl-build \
   pyenv \
   haskell-stack \
