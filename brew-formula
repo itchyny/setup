@@ -19,6 +19,7 @@ formulas=( \
   rust \
   shellcheck \
   envchain \
+  awscli \
   \
   mackerelio/mackerel-agent/mackerel-agent \
   mackerelio/mackerel-agent/mkr \
