@@ -9,7 +9,6 @@ test -t 0 && sudo -v || :
 ./bin
 ./zsh-plugins
 ./macos
-./chsh-zsh
 
 ./brew
 ./brew-formula

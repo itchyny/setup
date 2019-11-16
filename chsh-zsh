@@ -1,4 +1,0 @@
-#!/bin/bash
-set -euxo pipefail
-
-sudo chsh -s /bin/zsh "$(whoami)"
