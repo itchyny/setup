@@ -13,5 +13,6 @@ target=$2
 if [ -e "$target" ]; then
   echo "Target $target exists. Skip creating symlink of $src." > /dev/stderr
 else
+  mkdir -p "${target%/*}"
   ln -s "$src" "$target"
 fi
