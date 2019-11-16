@@ -13,6 +13,7 @@ formulas=( \
   htop \
   redis \
   go \
+  scala sbt \
   rbenv ruby-build \
   plenv perl-build \
   pyenv \
