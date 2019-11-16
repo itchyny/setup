@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ux
+set -euxo pipefail
 
 # gopls
 goget golang.org/x/tools/cmd/gopls
