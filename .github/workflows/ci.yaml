@@ -1,0 +1,13 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Test
+    runs-on: macos-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@master
+    - name: Test setup scripts
+      run: ./setup
