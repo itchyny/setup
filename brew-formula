@@ -41,6 +41,7 @@ formulas=( \
   itchyny/tap/gojq \
   itchyny/tap/mkrg \
   itchyny/tap/mackerel-plugin-battery \
+  itchyny/tap/mackerel-plugin-dice \
   itchyny/tap/formulate \
   \
   Songmu/tap/blogsync \
