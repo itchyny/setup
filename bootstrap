@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euxo pipefail
 
+[[ "$USER" != "itchyny" ]] && echo "You may not want to use this script." > /dev/stderr && exit 1
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/itchyny/setup/master/brew)"
 
 trap 'rm -rf /tmp/setup' EXIT SIGHUP SIGINT SIGQUIT SIGTERM
