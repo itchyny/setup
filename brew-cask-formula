@@ -11,6 +11,7 @@ formulas=( \
   slack \
   hammerspoon \
   flux \
+  dropbox \
 )
 
 for formula in "${formulas[@]}"; do
