@@ -2,6 +2,7 @@
 set -euxo pipefail
 
 formulas=( \
+  docker \
   java \
   iterm2 \
   google-japanese-ime \
