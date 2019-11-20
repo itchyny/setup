@@ -13,5 +13,5 @@ fi
 files=$(git ls-files -s | grep 755 | awk '{ print $4 }')
 
 for f in $files; do
-  shellcheck "$f"
+  shellcheck -x "$f"
 done
