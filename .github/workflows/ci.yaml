@@ -11,3 +11,5 @@ jobs:
       uses: actions/checkout@master
     - name: Test setup scripts
       run: ./setup
+    - name: Run shellcheck
+      run: ./script/ci
