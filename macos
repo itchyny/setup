@@ -15,6 +15,9 @@ fi
 
 # Ref: https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
+# Kill System Preferences to prevent them from overriding settings
+osascript -e 'tell application "System Preferences" to quit'
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
@@ -23,14 +26,33 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder ShowRecentTags -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write com.apple.finder QuitMenuItem -bool YES
+defaults write com.apple.finder NewWindowTarget -string "PfDo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+defaults write -g AppleShowAllExtensions -bool true
 osascript -e 'tell application "Finder" to quit'
+
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Configure hot corners
+defaults write com.apple.dock wvous-tl-corner -int 0
+defaults write com.apple.dock wvous-tl-modifier -int 0
+defaults write com.apple.dock wvous-tr-corner -int 5
+defaults write com.apple.dock wvous-tr-modifier -int 0
+defaults write com.apple.dock wvous-bl-corner -int 2
+defaults write com.apple.dock wvous-bl-modifier -int 0
+defaults write com.apple.dock wvous-br-corner -int 5
+defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Dock
 defaults write com.apple.dock tilesize -int 36
@@ -42,9 +64,29 @@ defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dock show-recents -bool false
 osascript -e 'tell application "Dock" to quit'
 
+# Hide the battery percentage from the menu bar
+defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+
+# Screenshot
+defaults write com.apple.screencapture type png
+mkdir -p ~/Documents/screenshots
+defaults write com.apple.screencapture location ~/Documents/screenshots
+
 # Key
-defaults write NSGlobalDomain InitialKeyRepeat -int 25
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 defaults write NSGlobalDomain KeyRepeat -int 2
+
+# Remap CapsLock key to Control
+keyboardid=$(ioreg -c AppleEmbeddedKeyboard -r | grep -Eiw "VendorID|ProductID" | awk '{ print $4 }' | tr '\n' '-')'0'
+defaults -currentHost write -g com.apple.keyboard.modifiermapping.$keyboardid -array \
+  '<dict>
+    <key>HIDKeyboardModifierMappingDst</key> <integer>30064771300</integer>
+    <key>HIDKeyboardModifierMappingSrc</key> <integer>30064771129</integer>
+  </dict>'
+
+# Change system language to English, and Japanese
+defaults write -g AppleLanguages -array en ja
+defaults write -g AppleLocale -string "en_JP"
 
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
