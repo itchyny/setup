@@ -54,6 +54,12 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 defaults write com.apple.dock wvous-br-corner -int 5
 defaults write com.apple.dock wvous-br-modifier -int 0
 
+# Screensaver
+defaults -currentHost write com.apple.screensaver showClock -bool false
+defaults -currentHost write com.apple.screensaver idleTime -int 3600
+defaults -currentHost write com.apple.screensaver moduleDict \
+  -dict moduleName Arabesque path "/System/Library/Screen Savers/Arabesque.saver" type 0
+
 # Dock
 defaults write com.apple.dock tilesize -int 36
 defaults write com.apple.dock magnification -bool true
