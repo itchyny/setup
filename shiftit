@@ -1,0 +1,23 @@
+#!/bin/bash
+set -euxo pipefail
+
+tools/brew-cask-install shiftit
+
+defaults write org.shiftitapp.ShiftIt SUEnableAutomaticChecks -bool true
+defaults write org.shiftitapp.ShiftIt SUSendProfileInfo -bool false
+
+defaults write org.shiftitapp.ShiftIt leftKeyCode -int 123
+defaults write org.shiftitapp.ShiftIt leftModifiers -int 9699328
+defaults write org.shiftitapp.ShiftIt rightKeyCode -int 124
+defaults write org.shiftitapp.ShiftIt rightModifiers -int 9699328
+defaults write org.shiftitapp.ShiftIt topKeyCode -int 126
+defaults write org.shiftitapp.ShiftIt topModifiers -int 9699328
+defaults write org.shiftitapp.ShiftIt bottomKeyCode -int 125
+defaults write org.shiftitapp.ShiftIt bottomModifiers -int 9699328
+defaults write org.shiftitapp.ShiftIt fullScreenKeyCode -int 3
+defaults write org.shiftitapp.ShiftIt fullScreenModifiers -int 1310720
+defaults write org.shiftitapp.ShiftIt maximizeKeyCode -int 36
+defaults write org.shiftitapp.ShiftIt maximizeModifiers -int 1310720
+
+osascript -e 'tell application "ShiftIt" to quit'
+open -a ShiftIt
