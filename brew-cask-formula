@@ -18,4 +18,4 @@ for formula in "${formulas[@]}"; do
   tools/brew-cask-install "$formula"
 done
 
-tools/make-symlink ~/{.files,.hammerspoon}/init.lua
+tools/make-symlink ~/.files/.init.lua ~/.hammerspoon/init.lua
