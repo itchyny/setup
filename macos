@@ -82,13 +82,14 @@ defaults write com.apple.screencapture location ~/Documents/screenshots
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 defaults write NSGlobalDomain KeyRepeat -int 2
 
-# Remap CapsLock key to Control
+# Remap keys (ref: https://developer.apple.com/library/archive/technotes/tn2450/_index.html)
 keyboardid=$(ioreg -c AppleEmbeddedKeyboard -r | grep -Eiw "VendorID|ProductID" | awk '{ print $4 }' | tr '\n' '-' || :)'0'
 if [[ "$keyboardid" != "0" ]]; then
+  # Caps Lock 0x39 -> Left Control 0xe0
   defaults -currentHost write -g "com.apple.keyboard.modifiermapping.$keyboardid" -array \
     '<dict>
-      <key>HIDKeyboardModifierMappingDst</key> <integer>30064771300</integer>
-      <key>HIDKeyboardModifierMappingSrc</key> <integer>30064771129</integer>
+      <key>HIDKeyboardModifierMappingSrc</key> <integer>0x700000039</integer>
+      <key>HIDKeyboardModifierMappingDst</key> <integer>0x7000000e0</integer>
     </dict>'
 fi
 
