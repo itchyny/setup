@@ -13,7 +13,6 @@ source ./bin
 ./brew
 ./brew-formula
 ./brew-cask-formula
-./shiftit
 ./font
 ./ruby
 ./lsp
