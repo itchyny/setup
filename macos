@@ -83,8 +83,8 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Remap keys (ref: https://developer.apple.com/library/archive/technotes/tn2450/_index.html)
-keyboardid=$(ioreg -c AppleEmbeddedKeyboard -r | grep -Eiw "VendorID|ProductID" | awk '{ print $4 }' | tr '\n' '-' || :)'0'
-if [[ "$keyboardid" != "0" ]]; then
+keyboardid=$(ioreg -c AppleEmbeddedKeyboard -r | grep -Eiw "VendorID|ProductID" | awk '{ print $4 }' | tr '\n' '-' && echo 0) || :
+if [[ -n "$keyboardid" ]]; then
   # Caps Lock 0x39 -> Left Control 0xe0
   defaults -currentHost write -g "com.apple.keyboard.modifiermapping.$keyboardid" -array \
     '<dict>
