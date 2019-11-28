@@ -68,6 +68,54 @@ defaults write com.apple.dock mineffect -string "scale"
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dock show-recents -bool false
+apps=()
+for app in \
+  "/Applications/iTerm.app/" \
+  "/Applications/Google%20Chrome.app/" \
+  "/Applications/Slack.app/" \
+  "/Applications/Safari.app/" \
+  "/Applications/Firefox.app/" \
+  "/Applications/XCode.app/" \
+  "/System/Applications/Notes.app/" \
+  "/System/Applications/Utilities/Activity%20Monitor.app/" \
+  "/System/Applications/System%20Preferences.app/" \
+; do
+  apps+=("
+    <dict>
+      <key>tile-data</key>
+      <dict>
+        <key>file-data</key>
+        <dict>
+          <key>_CFURLString</key> <string>file://$app</string>
+          <key>_CFURLStringType</key> <integer>15</integer>
+        </dict>
+        <key>file-label</key> <string>$(basename "$app" | sed 's/%20/ /g; s/[.]app//g')</string>
+      </dict>
+      <key>tile-type</key> <string>file-tile</string>
+    </dict>
+  ")
+done
+defaults write com.apple.dock persistent-apps -array "${apps[@]}"
+others=()
+for app in \
+  "/Applications/" \
+; do
+  others+=("
+    <dict>
+      <key>tile-data</key>
+      <dict>
+        <key>file-data</key>
+        <dict>
+          <key>_CFURLString</key> <string>file://$app</string>
+          <key>_CFURLStringType</key> <integer>15</integer>
+        </dict>
+        <key>file-label</key> <string>$(basename "$app" | sed 's/%20/ /g; s/[.]app//g')</string>
+      </dict>
+      <key>tile-type</key> <string>directory-tile</string>
+    </dict>
+  ")
+done
+defaults write com.apple.dock persistent-others -array "${others[@]}"
 osascript -e 'tell application "Dock" to quit'
 
 # Hide the battery percentage from the menu bar
