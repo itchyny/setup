@@ -29,7 +29,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowRecentTags -bool false
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-defaults write com.apple.finder QuitMenuItem -bool YES
+defaults write com.apple.finder QuitMenuItem -bool true
 defaults write com.apple.finder NewWindowTarget -string "PfDo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
