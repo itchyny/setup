@@ -126,6 +126,7 @@ defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 
 # Screenshot
 defaults write com.apple.screencapture type png
+defaults write com.apple.screencapture disable-shadow -bool true
 mkdir -p ~/Documents/screenshots
 defaults write com.apple.screencapture location ~/Documents/screenshots
 
