@@ -48,6 +48,8 @@ formulas=( \
   Songmu/tap/blogsync \
 )
 
+tools/brew-cask-install "adoptopenjdk" # required for scala
+
 for formula in "${formulas[@]}"; do
   tools/brew-install "$formula"
 done
