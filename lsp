@@ -2,6 +2,7 @@
 set -euxo pipefail
 
 # gopls
+export GOPATH=~/.go
 goget golang.org/x/tools/cmd/gopls
 
 # typescript-language-server
