@@ -18,3 +18,6 @@ for formula in "${formulas[@]}"; do
 done
 
 tools/make-symlink ~/.files/.init.lua ~/.hammerspoon/init.lua
+defaults write com.hammerspoon.Hammerspoon HSUploadCrashData -bool false
+defaults write com.hammerspoon.Hammerspoon MJShowDockIconKey -bool false
+osascript -e 'tell application "Hammerspoon" to quit'
