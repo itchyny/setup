@@ -17,7 +17,7 @@ formulas=( \
   go \
   scala sbt \
   rbenv \
-  nodenv \
+  node nodenv \
   plenv perl-build \
   pyenv \
   haskell-stack \
