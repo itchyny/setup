@@ -17,7 +17,7 @@ formulas=( \
   go \
   scala sbt \
   rbenv \
-  node nodenv \
+  nodenv \
   plenv perl-build \
   pyenv \
   haskell-stack \
@@ -50,6 +50,10 @@ formulas=( \
 
 if ! brew cask ls --versions "adoptopenjdk"; then
   brew cask install --no-quarantine "adoptopenjdk" # required for scala
+fi
+
+if ! command -v node >/dev/null 2>&1; then
+  tools/brew-install "node"
 fi
 
 for formula in "${formulas[@]}"; do
