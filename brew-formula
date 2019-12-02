@@ -48,7 +48,9 @@ formulas=( \
   Songmu/tap/blogsync \
 )
 
-tools/brew-cask-install "adoptopenjdk" # required for scala
+if ! brew cask ls --versions "adoptopenjdk"; then
+  brew cask install --no-quarantine "adoptopenjdk" # required for scala
+fi
 
 for formula in "${formulas[@]}"; do
   tools/brew-install "$formula"
