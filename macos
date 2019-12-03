@@ -21,6 +21,9 @@ osascript -e 'tell application "System Preferences" to quit'
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+# Mute the beep sound
+defaults write NSGlobalDomain com.apple.sound.beep.volume -int 0
+
 # Finder
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
