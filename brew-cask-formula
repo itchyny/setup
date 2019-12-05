@@ -16,7 +16,8 @@ for formula in "${formulas[@]}"; do
   tools/brew-cask-install "$formula"
 done
 
-tools/make-symlink ~/.files/.init.lua ~/.hammerspoon/init.lua
 defaults write com.hammerspoon.Hammerspoon HSUploadCrashData -bool false
 defaults write com.hammerspoon.Hammerspoon MJShowDockIconKey -bool false
+defaults write org.hammerspoon.Hammerspoon MJConfigFile "$XDG_CONFIG_HOME/hammerspoon/init.lua"
+tools/make-symlink ~/.files/.init.lua "$XDG_CONFIG_HOME/hammerspoon/init.lua"
 osascript -e 'tell application "Hammerspoon" to quit'
