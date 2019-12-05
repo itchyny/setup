@@ -5,6 +5,10 @@ cd "$(dirname "$0")"
 
 test -t 0 && sudo -v
 
+export XDG_CONFIG_HOME=~/.config
+export XDG_CACHE_HOME=~/.cache
+export XDG_DATA_HOME=~/.share
+
 ./dotfiles
 source ./bin
 ./zsh-plugins
