@@ -2,7 +2,7 @@
 set -euxo pipefail
 
 # gopls
-export GOPATH=$XDG_CACHE_HOME/go
+export GOPATH=$XDG_DATA_HOME/go
 goget golang.org/x/tools/cmd/gopls
 
 # typescript-language-server
