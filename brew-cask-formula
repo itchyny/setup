@@ -9,7 +9,6 @@ formulas=( \
   firefox \
   slack \
   hammerspoon \
-  flux \
   dropbox \
 )
 
