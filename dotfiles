@@ -9,4 +9,4 @@ for f in .vimrc .vimrc.yaml .zshrc .tmux.conf; do
   tools/make-symlink "$target/$f" ~/"$f"
 done
 
-mkdir -p ~/.vim/cache
+mkdir -p ~/.vim/cache/swap
