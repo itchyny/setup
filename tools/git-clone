@@ -2,7 +2,7 @@
 
 cmdname="$(basename "${BASH_SOURCE[0]}")"
 
-if [ $# -lt 1 ] || [ $# -gt 2 ]; then
+if [[ $# -lt 1 ]] || [[ $# -gt 2 ]]; then
   echo "Usage: $cmdname repo target" > /dev/stderr
   exit 1
 fi
@@ -10,9 +10,9 @@ fi
 repo=$1
 target=$2
 
-if [ $# == 1 ]; then
+if [[ $# == 1 ]]; then
   git clone "$repo"
-elif [ -e "$target" ]; then
+elif [[ -e "$target" ]]; then
   echo "Target $target exists. Skip cloning $repo." > /dev/stderr
 else
   git clone "$repo" "$target"

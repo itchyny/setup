@@ -2,7 +2,7 @@
 
 cmdname="$(basename "${BASH_SOURCE[0]}")"
 
-if [ $# -ne 1 ]; then
+if [[ $# -ne 1 ]]; then
   echo "Usage: $cmdname formula" > /dev/stderr
   exit 1
 fi
