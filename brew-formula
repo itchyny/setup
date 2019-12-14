@@ -62,7 +62,6 @@ done
 
 if command -v miv >/dev/null 2>&1; then
   miv install
-  cd "$(miv path vimproc)" && make
 fi
 
 eval "$(plenv init -)"
