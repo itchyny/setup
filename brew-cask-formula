@@ -16,6 +16,13 @@ for formula in "${formulas[@]}"; do
   tools/brew-cask-install "$formula"
 done
 
+# iTerm2
+defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add 'Quit iTerm2' '@~^$q'
+
+# Google Chrome
+defaults write com.google.Chrome NSUserKeyEquivalents -dict-add 'Quit Google Chrome' '@~^$q'
+
+# Hammerspoon
 defaults write com.hammerspoon.Hammerspoon HSUploadCrashData -bool false
 defaults write com.hammerspoon.Hammerspoon MJShowDockIconKey -bool false
 defaults write org.hammerspoon.Hammerspoon MJConfigFile "$XDG_CONFIG_HOME/hammerspoon/init.lua"
