@@ -5,8 +5,10 @@ target=$XDG_CONFIG_HOME/dotfiles
 
 tools/git-clone https://github.com/itchyny/dotfiles "$target"
 
-for f in .vimrc .vimrc.yaml .zshrc .tmux.conf; do
+for f in .vimrc .zshrc .tmux.conf; do
   tools/make-symlink "$target/$f" ~/"$f"
 done
+tools/make-symlink "$target/.vimrc.yaml" "$XDG_CONFIG_HOME/miv/config.yaml"
 
-mkdir -p ~/.vim/cache/swap
+mkdir -p "$XDG_CACHE_HOME"/vim/{swap,backup,undo}
+mkdir -p "$XDG_DATA_HOME"/vim
