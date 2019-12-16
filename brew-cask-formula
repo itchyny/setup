@@ -17,10 +17,10 @@ for formula in "${formulas[@]}"; do
 done
 
 # iTerm2
-defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add 'Quit iTerm2' '@~^$q'
+defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add 'Quit iTerm2' '@~^q'
 
 # Google Chrome
-defaults write com.google.Chrome NSUserKeyEquivalents -dict-add 'Quit Google Chrome' '@~^$q'
+defaults write com.google.Chrome NSUserKeyEquivalents -dict-add 'Quit Google Chrome' '@~^q'
 
 # Hammerspoon
 defaults write com.hammerspoon.Hammerspoon HSUploadCrashData -bool false
