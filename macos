@@ -124,7 +124,7 @@ mkdir -p ~/Documents/screenshots
 defaults write com.apple.screencapture location ~/Documents/screenshots
 
 # Key
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
 defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Remap keys (ref: https://developer.apple.com/library/archive/technotes/tn2450/_index.html)
