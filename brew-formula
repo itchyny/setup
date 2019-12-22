@@ -27,6 +27,7 @@ formulas=( \
   sshuttle\
   ctags \
   coreutils \
+  libtool \
   gnuplot \
   awscli \
   \
