@@ -19,4 +19,3 @@ source ./bin
 ./brew-cask-formula
 ./font
 ./ruby
-./lsp
