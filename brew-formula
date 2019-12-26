@@ -30,6 +30,7 @@ formulas=( \
   libtool \
   gnuplot \
   awscli \
+  ascii \
   \
   mackerelio/mackerel-agent/mackerel-agent \
   mackerelio/mackerel-agent/mkr \
