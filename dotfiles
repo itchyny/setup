@@ -9,6 +9,7 @@ for f in .vimrc .zshrc .tmux.conf; do
   tools/make-symlink "$target/$f" ~/"$f"
 done
 tools/make-symlink "$target/.vimrc.yaml" "$XDG_CONFIG_HOME/miv/config.yaml"
+tools/make-symlink "$target/.irbrc" "$XDG_CONFIG_HOME/irb/irbrc"
 
 mkdir -p "$XDG_CACHE_HOME"/vim/{swap,backup,undo}
 mkdir -p "$XDG_DATA_HOME"/vim
