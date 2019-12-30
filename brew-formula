@@ -43,6 +43,7 @@ formulas=( \
   itchyny/tap/gojo \
   itchyny/tap/gojq \
   itchyny/tap/mkrg \
+  itchyny/tap/volume \
   itchyny/tap/mackerel-plugin-battery \
   itchyny/tap/mackerel-plugin-dice \
   itchyny/tap/formulate \
