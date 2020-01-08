@@ -42,6 +42,7 @@ formulas=( \
   itchyny/tap/rexdep \
   itchyny/tap/gojo \
   itchyny/tap/gojq \
+  itchyny/tap/mmv \
   itchyny/tap/mkrg \
   itchyny/tap/volume \
   itchyny/tap/mackerel-plugin-battery \
