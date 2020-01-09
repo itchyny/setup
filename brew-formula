@@ -31,6 +31,7 @@ formulas=( \
   gnuplot \
   awscli \
   ascii \
+  pandoc \
   \
   mackerelio/mackerel-agent/mackerel-agent \
   mackerelio/mackerel-agent/mkr \
