@@ -13,6 +13,7 @@ formulas=( \
   vim \
   tmux \
   htop \
+  pstree \
   redis \
   go \
   scala sbt \
