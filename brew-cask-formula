@@ -18,6 +18,7 @@ done
 
 # iTerm2
 defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add 'Quit iTerm2' '@~^q'
+defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add 'Close' '@^w'
 
 # Google Chrome
 defaults write com.google.Chrome NSUserKeyEquivalents -dict-add 'Quit Google Chrome' '@~^q'
