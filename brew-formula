@@ -37,19 +37,20 @@ formulas=( \
   mackerelio/mackerel-agent/mackerel-agent \
   mackerelio/mackerel-agent/mkr \
   \
-  itchyny/tap/git-branch-name \
+  itchyny/tap/bed \
   itchyny/tap/fillin \
-  itchyny/tap/miv \
-  itchyny/tap/qhs \
-  itchyny/tap/rexdep \
+  itchyny/tap/formulate \
+  itchyny/tap/git-branch-name \
   itchyny/tap/gojo \
   itchyny/tap/gojq \
-  itchyny/tap/mmv \
-  itchyny/tap/mkrg \
-  itchyny/tap/volume \
   itchyny/tap/mackerel-plugin-battery \
   itchyny/tap/mackerel-plugin-dice \
-  itchyny/tap/formulate \
+  itchyny/tap/miv \
+  itchyny/tap/mkrg \
+  itchyny/tap/mmv \
+  itchyny/tap/qhs \
+  itchyny/tap/rexdep \
+  itchyny/tap/volume \
   \
   Songmu/tap/blogsync \
 )
