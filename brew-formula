@@ -26,7 +26,6 @@ formulas=( \
   shellcheck \
   envchain \
   sshuttle\
-  ctags \
   coreutils \
   libtool \
   gnuplot \
