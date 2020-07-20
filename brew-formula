@@ -44,6 +44,7 @@ formulas=( \
   itchyny/tap/gojq \
   itchyny/tap/mackerel-plugin-battery \
   itchyny/tap/mackerel-plugin-dice \
+  itchyny/tap/mackerel-plugin-uptime \
   itchyny/tap/miv \
   itchyny/tap/mkrg \
   itchyny/tap/mmv \
