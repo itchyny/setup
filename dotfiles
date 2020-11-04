@@ -14,3 +14,7 @@ tools/make-symlink "$target/.irbrc" "$XDG_CONFIG_HOME/irb/irbrc"
 
 mkdir -p "$XDG_CACHE_HOME"/vim/{swap,backup,undo}
 mkdir -p "$XDG_DATA_HOME"/vim
+
+export ZINIT_HOME="$XDG_DATA_HOME"/zinit
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+touch ~/.zprofile

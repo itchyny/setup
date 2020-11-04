@@ -40,7 +40,6 @@ formulas=( \
   itchyny/tap/bed \
   itchyny/tap/fillin \
   itchyny/tap/formulate \
-  itchyny/tap/git-branch-name \
   itchyny/tap/gojo \
   itchyny/tap/gojq \
   itchyny/tap/mackerel-plugin-battery \
