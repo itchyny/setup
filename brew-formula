@@ -30,7 +30,6 @@ formulas=( \
   coreutils \
   libtool \
   gnuplot \
-  awscli \
   ascii \
   pandoc \
   \
