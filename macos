@@ -4,12 +4,12 @@ set -euxo pipefail
 cmdname="$(basename "${BASH_SOURCE[0]}")"
 
 if ! command -v defaults >/dev/null; then
-  echo "$cmdname: defaults not found" > /dev/stderr
+  echo "$cmdname: defaults not found" >&2
   exit
 fi
 
 if ! command -v osascript >/dev/null; then
-  echo "$cmdname: osascript not found" > /dev/stderr
+  echo "$cmdname: osascript not found" >&2
   exit
 fi
 

@@ -3,7 +3,7 @@
 cmdname="$(basename "${BASH_SOURCE[0]}")"
 
 if [[ $# -ne 2 ]]; then
-  echo "Usage: $cmdname source target" > /dev/stderr
+  echo "Usage: $cmdname source target" >&2
   exit 1
 fi
 
@@ -11,7 +11,7 @@ src=$1
 target=$2
 
 if [[ -e "$target" || -L "$target" ]]; then
-  echo "Target $target exists. Skip creating symlink of $src." > /dev/stderr
+  echo "Target $target exists. Skip creating symlink of $src." >&2
 else
   mkdir -p "${target%/*}"
   ln -s "$src" "$target"
