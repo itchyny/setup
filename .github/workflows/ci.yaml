@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
     - name: Test setup scripts
       run: ./setup
     - name: Run shellcheck
