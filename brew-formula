@@ -54,8 +54,8 @@ formulas=( \
   Songmu/tap/blogsync \
 )
 
-if ! brew cask ls --versions "adoptopenjdk"; then
-  brew cask install --no-quarantine "adoptopenjdk" # required for scala
+if ! brew list --cask --versions "adoptopenjdk"; then
+  brew install --cask --no-quarantine "adoptopenjdk" # required for scala
 fi
 
 if ! command -v node >/dev/null 2>&1; then

@@ -9,6 +9,6 @@ fi
 
 formula=$1
 
-if ! brew cask ls --versions "$formula"; then
-  brew cask install "$formula"
+if ! brew list --cask --versions "$formula"; then
+  brew install --cask "$formula"
 fi
