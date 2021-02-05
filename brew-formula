@@ -24,7 +24,7 @@ formulas=( \
   haskell-stack \
   shellcheck \
   envchain \
-  sshuttle\
+  sshuttle \
   coreutils \
   libtool \
   gnuplot \
