@@ -8,7 +8,6 @@ formulas=( \
   curl \
   git \
   hub \
-  jq \
   zsh \
   vim \
   tmux \
@@ -52,6 +51,10 @@ formulas=( \
   \
   Songmu/tap/blogsync \
 )
+
+if ! command -v jq >/dev/null 2>&1; then
+  brew install jq --HEAD
+fi
 
 if ! brew list --cask --versions "adoptopenjdk"; then
   brew install --cask --no-quarantine "adoptopenjdk" # required for scala
