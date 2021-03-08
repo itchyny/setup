@@ -15,7 +15,6 @@ formulas=( \
   exa \
   pstree \
   redis \
-  go \
   scala sbt \
   rbenv \
   nodenv \
@@ -60,9 +59,11 @@ if ! brew list --cask --versions "adoptopenjdk"; then
   brew install --cask --no-quarantine "adoptopenjdk" # required for scala
 fi
 
-if ! command -v node >/dev/null 2>&1; then
-  tools/brew-install "node"
-fi
+for formula in go node; do
+  if ! command -v "$formula" >/dev/null 2>&1; then
+    tools/brew-install "$formula"
+  fi
+done
 
 for formula in "${formulas[@]}"; do
   tools/brew-install "$formula"
