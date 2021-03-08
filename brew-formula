@@ -81,11 +81,12 @@ eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 
-if [[ -f /usr/local/etc/sbtopts ]]; then
+etc=$(brew --prefix)/etc
+if [[ -f "$etc/sbtopts" ]]; then
   sed -i.bak "
     s|#-sbt-dir .*|-sbt-dir ~/.cache/sbt|;
     s|#-sbt-boot .*|-sbt-boot ~/.cache/sbtboot|;
     s|#-ivy .*|-ivy ~/.cache/ivy2|" \
-    /usr/local/etc/sbtopts
-  rm -f /usr/local/etc/sbtopts.bak
+    "$etc/sbtopts"
+  rm -f "$etc/sbtopts.bak"
 fi
