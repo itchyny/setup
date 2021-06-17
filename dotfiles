@@ -12,7 +12,7 @@ tools/make-symlink "$target/.vimrc.yaml" "$XDG_CONFIG_HOME/miv/config.yaml"
 tools/make-symlink "$target/.tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
 tools/make-symlink "$target/.irbrc" "$XDG_CONFIG_HOME/irb/irbrc"
 
-mkdir -p "$XDG_DATA_HOME"/{vim/{swap,backup,undo,tmp},zsh}
+mkdir -p "$XDG_DATA_HOME"/{vim/{swap,backup,undo,tmp},miv,zsh}
 
 export ZINIT_HOME="$XDG_DATA_HOME"/zinit
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
