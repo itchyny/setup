@@ -8,3 +8,7 @@ fi
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if ! grep "brew shellenv" ~/.zprofile >/dev/null 2>&1; then
+  printf "eval \"\$(/opt/homebrew/bin/brew shellenv)\"" >>~/.zprofile
+fi
