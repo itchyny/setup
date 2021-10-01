@@ -130,6 +130,9 @@ defaults write com.apple.screencapture location ~/Documents/screenshots
 defaults write NSGlobalDomain InitialKeyRepeat -int 25
 defaults write NSGlobalDomain KeyRepeat -int 2
 
+# Kotoeri
+defaults write com.apple.inputmethod.Kotoeri JIMPrefWindowsModeKey -bool true
+
 # Remap keys (ref: https://developer.apple.com/library/archive/technotes/tn2450/_index.html)
 keyboardid=$(ioreg -c AppleEmbeddedKeyboard -r | grep -Eiw "VendorID|ProductID" | awk '{ print $4 }' | tr '\n' '-' && echo 0) || :
 if [[ -n "$keyboardid" ]]; then
