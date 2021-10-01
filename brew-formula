@@ -3,52 +3,52 @@ set -euxo pipefail
 
 brew update
 
-formulas=( \
-  wget \
-  curl \
-  git \
-  hub \
-  zsh \
-  vim \
-  tmux \
-  htop \
-  exa \
-  pstree \
-  redis \
-  scala sbt \
-  rbenv \
-  nodenv \
-  plenv perl-build \
-  pyenv \
-  haskell-stack \
-  shellcheck \
-  envchain \
-  sshuttle \
-  coreutils \
-  libtool \
-  gnuplot \
-  ascii \
-  pandoc \
-  \
-  mackerelio/mackerel-agent/mackerel-agent \
-  mackerelio/mackerel-agent/mkr \
-  \
-  itchyny/tap/bed \
-  itchyny/tap/fillin \
-  itchyny/tap/formulate \
-  itchyny/tap/gojo \
-  itchyny/tap/gojq \
-  itchyny/tap/mackerel-plugin-battery \
-  itchyny/tap/mackerel-plugin-dice \
-  itchyny/tap/mackerel-plugin-uptime \
-  itchyny/tap/miv \
-  itchyny/tap/mkrg \
-  itchyny/tap/mmv \
-  itchyny/tap/qhs \
-  itchyny/tap/rexdep \
-  itchyny/tap/volume \
-  \
-  Songmu/tap/blogsync \
+formulas=(
+  wget
+  curl
+  git
+  hub
+  zsh
+  vim
+  tmux
+  htop
+  exa
+  pstree
+  redis
+  scala sbt
+  rbenv
+  nodenv
+  plenv perl-build
+  pyenv
+  haskell-stack
+  shellcheck
+  envchain
+  sshuttle
+  coreutils
+  libtool
+  gnuplot
+  ascii
+  pandoc
+
+  mackerelio/mackerel-agent/mackerel-agent
+  mackerelio/mackerel-agent/mkr
+
+  itchyny/tap/bed
+  itchyny/tap/fillin
+  itchyny/tap/formulate
+  itchyny/tap/gojo
+  itchyny/tap/gojq
+  itchyny/tap/mackerel-plugin-battery
+  itchyny/tap/mackerel-plugin-dice
+  itchyny/tap/mackerel-plugin-uptime
+  itchyny/tap/miv
+  itchyny/tap/mkrg
+  itchyny/tap/mmv
+  itchyny/tap/qhs
+  itchyny/tap/rexdep
+  itchyny/tap/volume
+
+  Songmu/tap/blogsync
 )
 
 if ! command -v jq >/dev/null 2>&1; then

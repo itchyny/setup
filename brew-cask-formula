@@ -1,15 +1,15 @@
 #!/bin/bash
 set -euxo pipefail
 
-formulas=( \
-  docker \
-  iterm2 \
-  google-japanese-ime \
-  google-chrome \
-  firefox \
-  slack \
-  hammerspoon \
-  dropbox \
+formulas=(
+  docker
+  iterm2
+  google-japanese-ime
+  google-chrome
+  firefox
+  slack
+  hammerspoon
+  dropbox
 )
 
 for formula in "${formulas[@]}"; do
