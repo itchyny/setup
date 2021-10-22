@@ -8,6 +8,7 @@ test -t 0 && sudo -v
 export XDG_CONFIG_HOME=~/.config
 export XDG_CACHE_HOME=~/.cache
 export XDG_DATA_HOME=~/.share
+export XDG_STATE_HOME=~/.share/state
 
 ./dotfiles
 source ./bin
