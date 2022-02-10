@@ -73,6 +73,8 @@ defaults -currentHost write com.apple.screensaver moduleDict \
 # Safari
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add 'Show Web Inspector' '@~j'
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add 'Close Web Inspector' '@~j'
+defaults write com.apple.Safari NSUserKeyEquivalents -dict-add 'Reload Page From Origin' '$@r'
+defaults write com.apple.Safari NSUserKeyEquivalents -dict-add 'Show Reader' '@~r'
 
 # Dock
 defaults write com.apple.dock tilesize -int 36
