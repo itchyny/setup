@@ -15,8 +15,8 @@ fi
 
 # Ref: https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
-# Kill System Preferences to prevent them from overriding settings
-osascript -e 'tell application "System Preferences" to quit'
+# Kill System Settings to prevent them from overriding settings
+osascript -e 'tell application "System Settings" to quit'
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
@@ -119,7 +119,7 @@ write-dock-apps persistent-apps \
   /Applications/XCode.app/ \
   /System/Applications/Notes.app/ \
   /System/Applications/Utilities/Activity%20Monitor.app/ \
-  /System/Applications/System%20Preferences.app/
+  /System/Applications/System%20Settings.app/
 write-dock-apps persistent-others /Applications/
 osascript -e 'tell application "Dock" to quit'
 
