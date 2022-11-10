@@ -23,7 +23,6 @@ formulas=(
   haskell-stack
   shellcheck
   envchain
-  sshuttle
   coreutils
   libtool
   gnuplot
