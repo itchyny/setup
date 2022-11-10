@@ -36,6 +36,7 @@ formulas=(
   itchyny/tap/fillin
   itchyny/tap/formulate
   itchyny/tap/gojo
+  itchyny/tap/json2yaml
   itchyny/tap/gojq
   itchyny/tap/mackerel-plugin-battery
   itchyny/tap/mackerel-plugin-dice
