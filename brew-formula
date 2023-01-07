@@ -36,8 +36,8 @@ formulas=(
   itchyny/tap/fillin
   itchyny/tap/formulate
   itchyny/tap/gojo
-  itchyny/tap/json2yaml
   itchyny/tap/gojq
+  itchyny/tap/json2yaml
   itchyny/tap/mackerel-plugin-battery
   itchyny/tap/mackerel-plugin-dice
   itchyny/tap/mackerel-plugin-uptime
@@ -51,7 +51,7 @@ formulas=(
   Songmu/tap/blogsync
 )
 
-if ! command -v jq >/dev/null 2>&1; then
+if ! command -v jq &>/dev/null; then
   brew install jq --HEAD
 fi
 
@@ -60,7 +60,7 @@ if ! brew list --cask --versions "adoptopenjdk"; then
 fi
 
 for formula in go node; do
-  if ! command -v "$formula" >/dev/null 2>&1; then
+  if ! command -v "$formula" &>/dev/null; then
     tools/brew-install "$formula"
   fi
 done
@@ -69,11 +69,11 @@ for formula in "${formulas[@]}"; do
   tools/brew-install "$formula"
 done
 
-if command -v miv >/dev/null 2>&1; then
+if command -v miv &>/dev/null; then
   miv install
 fi
 
-if ! command -v rustc >/dev/null 2>&1; then
+if ! command -v rustc &>/dev/null; then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 

@@ -28,7 +28,7 @@ defaults write com.hammerspoon.Hammerspoon HSUploadCrashData -bool false
 defaults write com.hammerspoon.Hammerspoon MJShowDockIconKey -bool false
 defaults write org.hammerspoon.Hammerspoon MJConfigFile "$XDG_CONFIG_HOME/hammerspoon/init.lua"
 tools/make-symlink "$XDG_CONFIG_HOME/dotfiles/.init.lua" "$XDG_CONFIG_HOME/hammerspoon/init.lua"
-if pgrep -f Hammerspoon.app >/dev/null 2>&1; then
+if pgrep -q -f Hammerspoon.app; then
   osascript -e 'tell application "Hammerspoon" to quit'
   open -a Hammerspoon
 fi
