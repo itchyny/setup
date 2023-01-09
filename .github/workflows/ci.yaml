@@ -3,19 +3,21 @@ name: CI
 on:
   push:
     branches:
-    - main
+      - main
   pull_request:
 
 jobs:
   test:
     name: Test
     runs-on: macos-latest
+    permissions:
+      contents: read
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Delete Python executable symlinks
-      run: find /usr/local/bin -lname '*/Python.framework/*' -print -delete
-    - name: Test setup scripts
-      run: ./setup
-    - name: Run shellcheck
-      run: ./script/ci
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Delete Python executable symlinks
+        run: find /usr/local/bin -lname '*/Python.framework/*' -print -delete
+      - name: Test setup scripts
+        run: ./setup
+      - name: Run shellcheck
+        run: ./script/ci
