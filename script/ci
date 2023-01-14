@@ -10,8 +10,4 @@ if ! command -v shellcheck >/dev/null; then
   exit 1
 fi
 
-files=$(git ls-files -s | grep 755 | awk '{ print $4 }')
-
-for f in $files; do
-  shellcheck -x "$f"
-done
+git ls-files -s | grep ^100755 | cut -f2 | xargs shellcheck
