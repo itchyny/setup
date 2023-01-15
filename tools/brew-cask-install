@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 cmdname="$(basename "${BASH_SOURCE[0]}")"
 
