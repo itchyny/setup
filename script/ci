@@ -1,12 +1,12 @@
 #!/bin/bash
 set -euxo pipefail
 
-cmdname="$(basename "${BASH_SOURCE[0]}")"
+readonly CMDNAME="${BASH_SOURCE[0]##*/}"
 
 cd "$(dirname "$0")/.."
 
 if ! command -v shellcheck >/dev/null; then
-  echo "$cmdname: shellcheck is required" >&2
+  echo "$CMDNAME: shellcheck is required" >&2
   exit 1
 fi
 
