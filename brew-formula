@@ -12,7 +12,7 @@ formulas=(
   vim
   tmux
   htop
-  exa
+  eza
   pstree
   redis
   scala sbt
