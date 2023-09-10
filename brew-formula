@@ -29,6 +29,7 @@ formulas=(
   gnuplot
   ascii
   pandoc
+  dos2unix
 
   mackerelio/mackerel-agent/mackerel-agent
   mackerelio/mackerel-agent/mkr
