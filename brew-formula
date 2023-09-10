@@ -4,6 +4,7 @@ set -euxo pipefail
 brew update
 
 formulas=(
+  jq
   wget
   curl
   git
@@ -50,10 +51,6 @@ formulas=(
 
   Songmu/tap/blogsync
 )
-
-if ! command -v jq &>/dev/null; then
-  brew install jq --HEAD
-fi
 
 if ! brew list --cask --versions "adoptopenjdk"; then
   brew install --cask --no-quarantine "adoptopenjdk" # required for scala
