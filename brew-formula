@@ -24,6 +24,8 @@ formulas=(
   pyenv
   haskell-stack
   shellcheck
+  actionlint
+  hadolint
   envchain
   coreutils
   libtool
