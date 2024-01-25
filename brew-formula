@@ -15,6 +15,7 @@ formulas=(
   htop
   eza
   pstree
+  rsync
   redis
   scala sbt
   rbenv
