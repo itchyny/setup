@@ -17,7 +17,6 @@ formulas=(
   pstree
   rsync
   redis
-  scala sbt
   rbenv
   nodenv
   plenv perl-build
@@ -57,10 +56,6 @@ formulas=(
   Songmu/tap/blogsync
 )
 
-if ! brew list --cask --versions "adoptopenjdk"; then
-  brew install --cask --no-quarantine "adoptopenjdk" # required for scala
-fi
-
 for formula in go node; do
   if ! command -v "$formula" &>/dev/null; then
     tools/brew-install "$formula"
@@ -83,13 +78,3 @@ eval "$(plenv init -)"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
-
-etc=$(brew --prefix)/etc
-if [[ -f "$etc/sbtopts" ]]; then
-  sed -i.bak "
-    s|#-sbt-dir .*|-sbt-dir ~/.cache/sbt|;
-    s|#-sbt-boot .*|-sbt-boot ~/.cache/sbtboot|;
-    s|#-ivy .*|-ivy ~/.cache/ivy2|" \
-    "$etc/sbtopts"
-  rm -f "$etc/sbtopts.bak"
-fi
