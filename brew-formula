@@ -5,19 +5,22 @@ brew update
 
 formulas=(
   jq
-  wget
-  curl
   git
   hub
   zsh
   vim
+  eza
+  nkf
+  wget
+  curl
+  less
   tmux
   htop
-  eza
-  pstree
+  ascii
   rsync
   redis
   rbenv
+  pstree
   nodenv
   plenv perl-build
   pyenv
@@ -29,9 +32,7 @@ formulas=(
   coreutils
   libtool
   gnuplot
-  ascii
   pandoc
-  dos2unix
 
   mackerelio/mackerel-agent/mackerel-agent
   mackerelio/mackerel-agent/mkr
