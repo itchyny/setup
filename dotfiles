@@ -5,9 +5,8 @@ target=$XDG_CONFIG_HOME/dotfiles
 
 tools/git-clone https://github.com/itchyny/dotfiles "$target"
 
-for f in .vimrc .zshrc; do
-  tools/make-symlink "$target/$f" ~/"$f"
-done
+tools/make-symlink "$target/.zshrc" ~/.zshrc
+tools/make-symlink "$target/.vimrc" "$XDG_CONFIG_HOME/vim/vimrc"
 tools/make-symlink "$target/.vimrc.yaml" "$XDG_CONFIG_HOME/miv/config.yaml"
 tools/make-symlink "$target/.tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
 tools/make-symlink "$target/.irbrc" "$XDG_CONFIG_HOME/irb/irbrc"
