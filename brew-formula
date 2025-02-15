@@ -22,7 +22,6 @@ formulas=(
   rbenv
   pstree
   nodenv
-  plenv perl-build
   pyenv
   haskell-stack
   shellcheck
@@ -76,7 +75,6 @@ if ! command -v rustc &>/dev/null; then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
-eval "$(plenv init -)"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
