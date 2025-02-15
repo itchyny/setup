@@ -9,6 +9,7 @@ formulas=(
   slack
   hammerspoon
   dropbox
+  font-inconsolata
 )
 
 for formula in "${formulas[@]}"; do
@@ -32,3 +33,6 @@ if pgrep -q -f Hammerspoon.app; then
   osascript -e 'tell application "Hammerspoon" to quit'
   open -a Hammerspoon
 fi
+
+# Font
+fc-cache -vf
