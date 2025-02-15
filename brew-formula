@@ -33,6 +33,7 @@ formulas=(
   libtool
   gnuplot
   pandoc
+  logrotate
 
   mackerelio/mackerel-agent/mackerel-agent
   mackerelio/mackerel-agent/mkr
