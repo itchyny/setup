@@ -68,6 +68,9 @@ defaults -currentHost write com.apple.screensaver moduleDict \
   -dict moduleName Arabesque path "/System/Library/Screen Savers/Arabesque.saver" type 0
 
 # Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari AlwaysRestoreSessionAtLaunch -bool true
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add 'Show Web Inspector' '@~j'
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add 'Close Web Inspector' '@~j'
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add 'Reload Page From Origin' '$@r'
