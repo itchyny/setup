@@ -5,6 +5,7 @@ brew update
 
 formulas=(
   jq
+  gh
   git
   hub
   zsh
@@ -17,11 +18,14 @@ formulas=(
   tmux
   htop
   ascii
+  bison
   rsync
   redis
   rbenv
+  awscli
   pstree
   nodenv
+  direnv
   pyenv
   haskell-stack
   shellcheck
