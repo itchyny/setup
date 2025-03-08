@@ -21,9 +21,6 @@ defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add 'Quit iTerm2
 defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add 'Close' '@^w'
 defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add 'New Window' '@^n'
 
-# Google Chrome
-defaults write com.google.Chrome NSUserKeyEquivalents -dict-add 'Quit Google Chrome' '@~^q'
-
 # Hammerspoon
 defaults write com.hammerspoon.Hammerspoon HSUploadCrashData -bool false
 defaults write com.hammerspoon.Hammerspoon MJShowDockIconKey -bool false
