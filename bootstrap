@@ -1,10 +1,33 @@
 #!/bin/bash
 set -euxo pipefail
 
-[[ "$USER" != "itchyny" ]] && echo "You may not want to use this script." >&2 && exit 1
+if [[ "$USER" != "itchyny" ]]; then
+  set +x
+  echo "This script is intended to be used by itchyny." >&2
+  read -r -p "Are you sure you want to continue? [y/N] " yn
+  if [[ ! $yn =~ ^[Yy](es)?$ ]]; then
+    exit 1
+  fi
+  set -x
+fi
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/itchyny/setup/main/brew)"
 
-trap 'rm -rf /tmp/setup' EXIT SIGHUP SIGINT SIGQUIT SIGTERM
-git clone https://github.com/itchyny/setup /tmp/setup
-/tmp/setup/setup
+dir=/tmp/setup
+url=https://github.com/itchyny/setup
+if [[ ! -d "$dir" ]]; then
+  git clone "$url" "$dir"
+elif [[ $(git -C "$dir" remote get-url origin) == "$url" ]]; then
+  git -C "$dir" pull
+else
+  echo "Unexpected setup repository in $dir." >&2
+  exit 1
+fi
+
+if "$dir/setup"; then
+  echo "Setup succeeded." >&2
+  rm -rf "$dir"
+else
+  echo "Update the scripts in $dir and try again." >&2
+  exit 1
+fi
