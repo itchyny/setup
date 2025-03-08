@@ -21,12 +21,13 @@ formulas=(
   bison
   rsync
   redis
+  pyenv
   rbenv
   awscli
-  pstree
-  nodenv
   direnv
-  pyenv
+  nodenv
+  pstree
+  rustup
   haskell-stack
   shellcheck
   actionlint
@@ -73,10 +74,6 @@ done
 
 if command -v miv &>/dev/null; then
   miv install
-fi
-
-if ! command -v rustc &>/dev/null; then
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
 eval "$(pyenv init -)"
