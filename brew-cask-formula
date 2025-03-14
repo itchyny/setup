@@ -9,6 +9,7 @@ formulas=(
   slack
   hammerspoon
   dropbox
+  licecap
   font-inconsolata
 )
 

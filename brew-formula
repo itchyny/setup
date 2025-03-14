@@ -28,6 +28,8 @@ formulas=(
   nodenv
   pstree
   rustup
+  gnu-sed
+  imagemagick
   haskell-stack
   shellcheck
   actionlint
