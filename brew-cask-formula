@@ -18,6 +18,9 @@ for formula in "${formulas[@]}"; do
 done
 
 # iTerm2
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+defaults write com.googlecode.iterm2 OnlyWhenMoreTabs -bool false
+defaults write com.googlecode.iterm2 QuitWhenAllWindowsClosed -bool true
 defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add 'Quit iTerm2' '@~^q'
 defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add 'Close' '@^w'
 defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add 'New Window' '@^n'
