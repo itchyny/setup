@@ -29,6 +29,7 @@ formulas=(
   pstree
   rustup
   gnu-sed
+  parallel
   imagemagick
   haskell-stack
   shellcheck
