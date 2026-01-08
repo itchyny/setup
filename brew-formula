@@ -17,8 +17,11 @@ formulas=(
   less
   tmux
   htop
+  pnpm
+  mise
   ascii
   bison
+  cmake
   rsync
   redis
   pyenv
@@ -29,6 +32,7 @@ formulas=(
   pstree
   rustup
   gnu-sed
+  grpcurl
   parallel
   imagemagick
   haskell-stack
